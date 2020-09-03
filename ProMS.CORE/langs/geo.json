@@ -1,0 +1,16 @@
+﻿{
+  "Lang": "ქა",
+  "Login": "ავტორიზაცია",
+  "Main": "მთავარი გვერდი",
+  "About": "საიტის შესახებ",
+  "Dev-By": "შექმნილია <a href=\"https://www.facebook.com/befxGeorgia/\" target=\"blank\"><b class=\"text-primary\">BeFX</b></a> მიერ.",
+  "Login-Title": "სისტემაში შესვლა",
+  "Pl-User": "მომხმარებლის სახელი",
+  "Pl-Pass": "მომხმარებლის პაროლი",
+  "Rem-Me": "დამიმახსოვრე",
+  "Login-Me": "ავტორიზაცია",
+  "Pl-Captcha": "სურათზე გამოსახული კოდი",
+  "LogOut": "გასვლა",
+  "Dashboard": "სამუშაო მაგიდა",
+  "Error-Message": "შეტანილი მონაცემები არასწორია!"
+}

@@ -1,0 +1,21 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+<div class="page-wrap d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <span class="display-1  btn btn-lg btn-danger text-15rem"><b style="text-align:center;">404</b></span>
+                <div class="mb-4 lead">
+                    @if (Model.ShowRequestId)
+                    {
+                        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,57 @@
+﻿@page
+@model ProMS.CORE.Pages.DashboardModel
+@{
+    ViewData["Title"] = Model.Translations["Dashboard"];
+}
+<div class="container"><br />
+    <div class="row justify-content-center">
+        <div class="col-lg-12 col-md-12 col-lg-12">
+            <form class="card card-subtitle" method="post">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fa fa-search h5 text-body"></i>
+                    </div>
+                    <div class="col">
+                        <input class="form-control form-control-sm form-control-borderless" type="search" placeholder="Search topics or keywords" name="Search">
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-info" type="submit"><span class="fa fa-search">&nbsp;&nbsp;</span>Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="navbar justify-content-center">
+
+    @for (int i = 0; i < 8; i++)
+    {
+        <div class="card-columns">
+            @for (int j = 0; j < 3; j++)
+            {
+            <div class="card bg-light">
+                <span class="fa fa-file-pdf ml-2 mt-2 text-info text-25px">&nbsp;&nbsp;</span>
+                <img class="card-img-top" src="~/imgs/proj.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a asp-area="" asp-page="/Detail"><span class="fa fa-eye text-dark">&nbsp;&nbsp;</span></a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-area="" asp-page="/Edit"><span class="fa fa-edit text-dark">&nbsp;&nbsp;</span></a>
+                        <a a href="#"><span class="fa fa-trash text-dark">&nbsp;&nbsp;</span></a>
+                    }
+                    else if (User.IsInRole("Manager"))
+                    {
+                        <a asp-area="" asp-page="/Edit"><span class="fa fa-edit text-dark">&nbsp;&nbsp;</span></a>
+                    }
+                </div>
+                <div class="card-footer bg-secondary">
+                    <div class="text-light float-left text-12px"><a href="#" class="text-light"><span class="fa fa-calendar-alt">&nbsp;&nbsp;</span>@DateTime.Now.ToString("dd/MM/yyyy")</a></div>
+                    <div class="text-12px text-right ml-auto text-light col-sm-5 col-md-5"><a href="#" class="text-light"><span class="fa fa-user-alt">&nbsp;&nbsp;</span> @User.Identity.Name</a></div>
+                </div>
+            </div>
+            }
+        </div>
+    }
+</div>

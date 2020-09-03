@@ -1,0 +1,47 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = Model.Translations["Login"];
+}
+<div class="col-lg-6 offset-lg-3"></div>
+<div class="login-form col-lg-6 offset-lg-3">
+    <div class="container">
+        <div class="jumbotron my-login-form-mt">
+            <form method="post" action="/users/login">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <h4 class="text-dark title">@Model.Translations["Login-Title"]</h4>
+                </div>
+                <div class="form-group input-group mb-sm-4">
+                    <input type="text" name="Username" maxlength="20" placeholder="@Model.Translations["Pl-User"]" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group input-group mb-sm-4">
+                    <input type="password" name="Password" placeholder="@Model.Translations["Pl-Pass"]" class="form-control" />
+                </div>
+                <div class="form-group mb-sm-4">
+                    <div>
+                        
+                        <img src="/captcha/img" width="120" height="45" />
+                        <input type="text" maxlength="5" name="Captcha" autocomplete="off" placeholder="@Model.Translations["Pl-Captcha"]" class="form-control col-sm-7" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lable class="text-dark ckeckbox">
+                        <input type="checkbox" name="RememberMe" />
+                        @Model.Translations["Rem-Me"]
+                    </lable>
+                </div>
+                @if (!Model.AttemptTry)
+                {
+                <div class="form-group d-block">
+                    <span class="text-12px text-danger alert alert-danger d-block"><button class="close fa-pull-right flex-sm-grow-0" type="button" data-dismiss="alert"><i class="fa fa-times"></i></button><strong>@Model.Message</strong></span>
+                </div>
+                }
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info form-control"><i class="fa fa-signin"></i>&nbsp;@Model.Translations["Login-Me"]</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

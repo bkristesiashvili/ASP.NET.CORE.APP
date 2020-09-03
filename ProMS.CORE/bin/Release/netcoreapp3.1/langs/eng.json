@@ -1,0 +1,16 @@
+﻿{
+  "Lang": "En",
+  "Login": "Login Page",
+  "Main": "Home Page",
+  "About": "About Page",
+  "Dev-By": "Developed By <a href=\"https://www.facebook.com/befxGeorgia/\" target=\"blank\"><b class=\"text-primary\">BeFX</b></a>.",
+  "Login-Title": "Login to System",
+  "Pl-User": "Username",
+  "Pl-Pass": "Password",
+  "Rem-Me": "Remember Me",
+  "Login-Me": "Login",
+  "Pl-Captcha": "Captcha",
+  "LogOut": "Logout",
+  "Dashboard": "Dashboard",
+  "Error-Message": "Invalid Credentials!"
+}

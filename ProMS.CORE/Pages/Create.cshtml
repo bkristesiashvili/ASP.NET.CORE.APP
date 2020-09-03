@@ -1,0 +1,47 @@
+﻿@page
+@model ProMS.CORE.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+    <div class="container">
+        <br />
+        <div class="jumbotron-fluid">
+            <div class="col-lg-12 col-md-12 col-lg-12">
+                <form method="post" class="flex-grow-1">
+                    <div class="form-group">
+                        <h4 class="text-dark modal-title">Create new Project</h4>
+                    </div>
+                    <div class="form-group">
+                        <img src="~/imgs/uImage.png" width=" 320" />
+                    </div>
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <textarea name="comment" maxlength="350" class="form-control h-20" rows="7"></textarea>
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control form-control-borderless" type="file" name="Search" accept="application/pdf">
+                        </div>
+                        <div class="input-group">
+                            <div class=" ml-auto float-right">
+                                <button class="btn btn-sm btn-success" type="submit"><span class="fa fa-plus-square">&nbsp;&nbsp;</span>Create</button>
+                                <a asp-page="/Dashboard" class="btn btn-sm btn-dark" type="submit"><span class="fa fa-times text-08rem">&nbsp;&nbsp;</span>Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,16 @@
+﻿{
+  "Lang": "Pу",
+  "Login": "Авторизоваться",
+  "Main": "Главная страница",
+  "About": "О сайте",
+  "Dev-By": "Разработано <a href=\"https://www.facebook.com/befxGeorgia/\" target=\"blank\"><b class=\"text-primary\">BeFX</b></a>.",
+  "Login-Title": "Вход в систему",
+  "Pl-User": "имя пользователя",
+  "Pl-Pass": "пароль",
+  "Rem-Me": "Запомни меня",
+  "Login-Me": "Войти",
+  "Pl-Captcha": "код с картинки",
+  "LogOut": "Выйти",
+  "Dashboard": "Панель приборов",
+  "Error-Message": "Неверные учетные данные!"
+}

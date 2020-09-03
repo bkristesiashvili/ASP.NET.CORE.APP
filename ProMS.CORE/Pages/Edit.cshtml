@@ -1,0 +1,49 @@
+﻿@page
+@model ProMS.CORE.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+    <div class="container">
+        <br />
+        <div class="jumbotron-fluid">
+            <div class="col-lg-12 col-md-12 col-lg-12">
+                <form method="post" class="flex-grow-1">
+                    <div class="form-group">
+                        <h4 class="text-dark modal-title">Edit Project</h4>
+                    </div>
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="form-group">
+                            <input id="ProjectImage" type="file" name="ProjectImage" style="display: none;" />
+                            <img id="img" class="btn" src="~/imgs/uImage.png" width="255" height="250" />
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" type="search" placeholder="Search topics or keywords" name="Search" autocomplete="off">
+                        </div>
+                        <div class="input-group form-group">
+                            <textarea name="comment" maxlength="350" class="form-control h-20" rows="7"></textarea>
+                        </div>
+                        <div class="input-group form-group">
+                            <input id="projectFile" style="display: none;" type="file" name="projectFile" accept="application/pdf">
+                            <button id="chooseFile" type="button" class="btn btn-sm btn-info"><span class="fa fa-file-upload"></span>&nbsp;&nbsp;Choose File</button>
+                        </div>
+                        <div class="input-group">
+                            <div class="text-right ml-auto">
+                                <button class="btn btn-success btn-sm" type="submit"><span class="fa fa-save">&nbsp;&nbsp;</span>Save</button>
+                                <a asp-page="/Dashboard" class="btn btn-sm btn-dark" type="submit"><span class="fa fa-times text-08rem">&nbsp;&nbsp;</span>Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+

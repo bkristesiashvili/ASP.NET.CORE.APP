@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="BeFX" />
+    <title>@ViewData["Title"] - KMS</title>
+    <link rel="stylesheet" href="@string.Format($"{Model.Root}lib/bootstrap/dist/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@string.Format($"{Model.Root}css/site.css")" />
+    <link rel="stylesheet" href="@string.Format($"{Model.Root}css/faicon/css/all.min.css")" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav id="nav-bar" class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-lg-4">
+            <div class="container" id="top">
+                <a class="navbar-brand font-weight-bold text-light" href="@Model.PagePath"><span class="h3 font-weight-bold">PMS</span><sub class="text-info h5 font-weight-bold">.Core</sub></a>
+                <button class="navbar-toggler bg-info" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars text-dark"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_userPage" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light text-08rem" href="@Model.PagePath"><span class="fa fa-home">&nbsp;&nbsp;</span>@Model.Translations["Main"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light text-08rem" asp-area="" asp-page="/About"><span class="fa fa-info">&nbsp;&nbsp;</span>@Model.Translations["About"]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <span class="devby">
+                &copy; 2020 - <b>Pms&nbsp;<b class="text-info">.CORE</b></b> - @Html.Raw(Model.Translations["Dev-By"]) &nbsp;<a asp-area="" asp-page="/About">@Model.Translations["About"]</a>
+            </span>
+        </div>
+        <a id="back-to-top" href="#" class="btn btn-info back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="fa fa-arrow-up"></span></a>
+    </footer>
+    <script src="@string.Format($"{Model.Root}lib/jquery/dist/jquery.min.js")"></script>
+    <script src="@string.Format($"{Model.Root}lib/bootstrap/dist/js/bootstrap.bundle.js")"></script>
+    <script src="@string.Format($"{Model.Root}js/site.js")" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
